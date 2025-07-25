@@ -1,6 +1,5 @@
 <?php
 include 'config.php';
-
 session_start();
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -14,9 +13,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
   if ($result->num_rows === 1) {
     $_SESSION['username'] = $username;
-    echo "<h2>Login successful! Welcome, $username.</h2>";
+    echo "<h2>Welcome, $username! Login Successful.</h2>";
   } else {
-    echo "<h2>Invalid credentials</h2>";
+    echo "<h2>Invalid credentials. Try again.</h2>";
   }
 }
 ?>
